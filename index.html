@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BorgRetail - KIOSKY®</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; color: #222; background: #fff; }
+    header, section { padding: 60px 20px; text-align: center; }
+    header { background: url('images/face.jpg') no-repeat center center/cover; color: white; height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+    nav { position: fixed; top: 0; left: 0; right: 0; background: white; border-bottom: 1px solid #ccc; padding: 10px 20px; display: flex; justify-content: center; gap: 20px; z-index: 1000; }
+    nav a { text-decoration: none; color: #333; font-weight: bold; }
+    .lang-switch { position: absolute; right: 20px; top: 10px; cursor: pointer; font-weight: bold; color: #4CAF50; }
+    h1 { font-size: 3em; margin-bottom: 20px; }
+    .highlight { color: #4CAF50; font-weight: bold; }
+    img { max-width: 100%; border-radius: 10px; margin: 20px 0; }
+    .flex { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
+    footer { background: #333; color: white; padding: 40px 20px; }
+    a.contact-link { color: #4CAF50; font-weight: bold; text-decoration: none; }
+    .en, .fr { display: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#kiosky">KIOSKY®</a>
+    <a href="#fonctionnement">Comment ça marche / How it works</a>
+    <a href="#emplacements">Emplacements / Locations</a>
+    <a href="#contact">Contact</a>
+    <div class="lang-switch" onclick="toggleLang()">EN/FR</div>
+  </nav>
+
+  <header>
+    <div class="fr">
+      <h1>KIOSKY® par BorgRetail</h1>
+      <p>La coque de téléphone personnalisée en 3 minutes chrono !</p>
+    </div>
+    <div class="en">
+      <h1>KIOSKY® by BorgRetail</h1>
+      <p>Your custom phone case in just 3 minutes!</p>
+    </div>
+  </header>
+
+  <section id="kiosky">
+    <div class="fr">
+      <h2>KIOSKY® c'est <span class="highlight">fast & fun</span></h2>
+      <p>Une borne automatique pour créer et imprimer votre coque personnalisée, en quelques clics.</p>
+    </div>
+    <div class="en">
+      <h2>KIOSKY® is <span class="highlight">fast & fun</span></h2>
+      <p>A smart kiosk to create and print your custom phone case in just a few taps.</p>
+    </div>
+    <div class="flex">
+      <img src="images/face.jpg" alt="Kiosky vue de face">
+      <img src="images/arriere.jpg" alt="Kiosky vue de dos">
+    </div>
+  </section>
+
+  <section id="fonctionnement">
+    <div class="fr">
+      <h2>Comment ça marche ?</h2>
+      <p>1) Scannez le QR code sur la borne, choisissez un modèle sur votre téléphone ou dans notre base KIOSKY®.<br>
+         2) Validez votre design, payez en ligne ou sur place.<br>
+         3) Récupérez votre coque imprimée en 3 minutes !</p>
+    </div>
+    <div class="en">
+      <h2>How does it work?</h2>
+      <p>1) Scan the QR code, select your model from your phone or our KIOSKY® gallery.<br>
+         2) Confirm your design and pay online or at the kiosk.<br>
+         3) Pick up your printed case in just 3 minutes!</p>
+    </div>
+    <div class="flex">
+      <img src="images/telephone_dans_la_main.jpg" alt="Choosing a photo">
+      <img src="images/easy_to_use.jpg" alt="Payment">
+      <img src="images/easy_to_use_2.jpg" alt="Pick up case">
+    </div>
+  </section>
+
+  <section id="emplacements">
+    <div class="fr">
+      <h2>Où trouver KIOSKY® ?</h2>
+      <p>Kiosky s’installe facilement dans les centres commerciaux, rues commerçantes, supermarchés…<br>
+      Il suffit d’une prise de courant et hop, Kiosky fait des heureux !</p>
+      <p>Idéal pour des événements éphèmères, cadeaux, ou simplement pour personnaliser son look.</p>
+    </div>
+    <div class="en">
+      <h2>Where can you find KIOSKY®?</h2>
+      <p>KIOSKY is easy to install in malls, shopping streets, or supermarkets.<br>
+      All you need is a power outlet – and let the magic happen!</p>
+      <p>Perfect for pop-up events, thoughtful gifts, or to upgrade your personal style.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="fr">
+      <h2>Vous souhaitez en savoir plus ?</h2>
+      <p>Contactez-nous si vous souhaitez installer KIOSKY® dans votre centre commercial ou autre lieu stratégique :</p>
+    </div>
+    <div class="en">
+      <h2>Want to know more?</h2>
+      <p>Reach out if you'd like to install KIOSKY® in your mall or strategic location:</p>
+    </div>
+    <p>WhatsApp : <a class="contact-link" href="https://wa.me/972544817608">+972 54 481 76 08</a><br>
+       Email : <a class="contact-link" href="mailto:contact@borgup.com">contact@borgup.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BorgRetail - Groupe Freeborg. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentLang = 'fr';
+    function toggleLang() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      document.querySelectorAll('.fr').forEach(e => e.style.display = currentLang === 'fr' ? 'block' : 'none');
+      document.querySelectorAll('.en').forEach(e => e.style.display = currentLang === 'en' ? 'block' : 'none');
+    }
+    toggleLang(); // Start with EN
+  </script>
+</body>
+</html>
